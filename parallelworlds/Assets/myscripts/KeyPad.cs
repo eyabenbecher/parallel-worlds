@@ -6,7 +6,7 @@ public class KeyPad : MonoBehaviour
 {
     [SerializeField] private Text num;
     [SerializeField] private Animator animator;
-    private string ans = "281233";
+    private string ans = "1731";
 
   public void Number(int number)
     {

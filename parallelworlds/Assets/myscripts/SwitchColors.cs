@@ -6,9 +6,17 @@ public class SwitchColors : MonoBehaviour
 {
     public LayerMask clickableLayer;
     [SerializeField] private List<Transform> selectedObjects = new List<Transform>();
-
+    public List<GameObject> targetObjects = new List<GameObject>(); 
+    public AudioClip correctOrderSound;
+    private AudioSource audioSource;
+    private bool allObjectsInPosition = false;
     private Transform firstSelectedObject;
     private Transform secondSelectedObject;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -33,11 +41,35 @@ public class SwitchColors : MonoBehaviour
                         secondSelectedObject = hitObject;
                         Debug.Log("Second object selected");
 
-                        // Switch positions if both objects are selected
                         SwitchObjectsPosition();
+                        CheckObjectPositions();
                     }
                 }
             }
+        }
+    }
+
+    void CheckObjectPositions()
+    {
+        for (int i = 0; i < selectedObjects.Count; i++)
+        {
+     
+            float distance = Vector3.Distance(selectedObjects[i].position, targetObjects[i].transform.position);
+            Debug.Log($"Object {i + 1} position: {selectedObjects[i].position}, Target position: {targetObjects[i].transform.position}, Distance to target position: {distance}");
+
+           
+            if (distance > 0.01f)
+            {
+                return; 
+            }
+        }
+
+       
+        if (!audioSource.isPlaying && !allObjectsInPosition)
+        {
+            Debug.Log("All objects in correct position");
+            audioSource.PlayOneShot(correctOrderSound);
+            allObjectsInPosition = true; 
         }
     }
 
@@ -51,7 +83,6 @@ public class SwitchColors : MonoBehaviour
 
             Debug.Log("Objects swapped: " + firstSelectedObject.name + " and " + secondSelectedObject.name);
 
-            // Reset selected objects
             firstSelectedObject = null;
             secondSelectedObject = null;
         }
