@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: cabinet
+    m_ConditionEvent: interact
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1278809207960822096}
@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: cabinet
+    m_ConditionEvent: interact
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4298936933922955371}
@@ -86,7 +86,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: cabinet
+    m_ConditionEvent: interact
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4298936933922955371}
@@ -139,7 +139,7 @@ AnimatorController:
   m_Name: lp_cabinet_door2
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: cabinet
+  - m_Name: interact
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0

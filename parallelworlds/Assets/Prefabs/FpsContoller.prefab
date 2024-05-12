@@ -71,7 +71,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7305198213672864156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f8bf12b7e13e144a92bc80754925caf, type: 3}
+  m_Script: {fileID: 11500000, guid: d0e808ccd0580874393a99bb94d8f7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 3
@@ -87,10 +87,9 @@ MonoBehaviour:
   footstepSounds:
   - {fileID: 8300000, guid: 057b1358d862a6f4bb8d2d39562734f4, type: 3}
   - {fileID: 8300000, guid: 9a6a77fb9d66b2f409a0856c4144f3a5, type: 3}
-  - {fileID: 8300000, guid: 2033b7268ea06fa40ababca04e9fca3f, type: 3}
   - {fileID: 8300000, guid: b8c7cc1f25491604482c5523abb7f4f7, type: 3}
-  walkStepInterval: 0.5
-  sprintStepInterval: 0.3
+  walkStepInterval: 0.7
+  sprintStepInterval: 0.5
   velocityThreshHold: 2
 --- !u!82 &8490228556717471031
 AudioSource:
