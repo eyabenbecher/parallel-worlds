@@ -5367,11 +5367,54 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 494224, guid: b09e95949a2b3cf489baf6fd2307361e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.301
+      objectReference: {fileID: 0}
+    - target: {fileID: 494224, guid: b09e95949a2b3cf489baf6fd2307361e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2439044
+      objectReference: {fileID: 0}
+    - target: {fileID: 494224, guid: b09e95949a2b3cf489baf6fd2307361e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.137
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 110172, guid: b09e95949a2b3cf489baf6fd2307361e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1621730899}
   m_SourcePrefab: {fileID: 100100000, guid: b09e95949a2b3cf489baf6fd2307361e, type: 3}
+--- !u!1 &1621730898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 110172, guid: b09e95949a2b3cf489baf6fd2307361e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1621730897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1621730899
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621730898}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5605cacd72200c24cab8450abd802d94, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1625984455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6731,10 +6774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad7cc0d4287f39a4a9e39c51a94cd2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCameraTransform: {fileID: 1889574685}
-  pickUpLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1001 &1898425128
 PrefabInstance:
   m_ObjectHideFlags: 0

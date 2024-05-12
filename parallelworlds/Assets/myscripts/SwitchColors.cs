@@ -5,9 +5,11 @@ using UnityEngine;
 public class SwitchColors : MonoBehaviour
 {
     public LayerMask clickableLayer;
+
     [SerializeField] private List<Transform> selectedObjects = new List<Transform>();
     public List<GameObject> targetObjects = new List<GameObject>(); 
     public AudioClip correctOrderSound;
+    public AudioClip switchSound;
     private AudioSource audioSource;
     private bool allObjectsInPosition = false;
     private Transform firstSelectedObject;
@@ -46,6 +48,7 @@ public class SwitchColors : MonoBehaviour
                     }
                 }
             }
+
         }
     }
 
@@ -65,7 +68,7 @@ public class SwitchColors : MonoBehaviour
         }
 
        
-        if (!audioSource.isPlaying && !allObjectsInPosition)
+        if (!allObjectsInPosition)
         {
             Debug.Log("All objects in correct position");
             audioSource.PlayOneShot(correctOrderSound);
@@ -85,6 +88,10 @@ public class SwitchColors : MonoBehaviour
 
             firstSelectedObject = null;
             secondSelectedObject = null;
+            if (audioSource != null && switchSound != null)
+            {
+                audioSource.PlayOneShot(switchSound);
+            }
         }
     }
 }
